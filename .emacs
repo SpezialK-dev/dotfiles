@@ -17,6 +17,7 @@
 ;;-----------------------------------------------------
 ;;sources for pkgs
 ;;-----------------------------------------------------
+ 
 
 ;; adding melpa
 ;; weirdly enought not working but not needed 
@@ -31,6 +32,11 @@
 (global-so-long-mode 1)
 ;; adding line numbers 
 (global-display-line-numbers-mode)
+
+;; to not break hardlinks 
+(setq backup-by-copying-when-linked t)
+;; if you want to choose a different behaviour this should fix it if the previous one does not work
+;; (setq backup-by-copying t) 
 
 ;;-----------------------------------------------------
 ;;custom keyboard shortcuts
