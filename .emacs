@@ -7,7 +7,7 @@
  '(custom-safe-themes
    '("603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961" default))
  '(package-selected-packages
-   '(treemacs-nerd-icons all-the-icons treemacs-magit magit dracula-theme dracular-theme multiple-cursors treemacs which-key yasnippet flycheck)))
+   '(rust-mode treemacs-nerd-icons all-the-icons treemacs-magit magit dracula-theme dracular-theme multiple-cursors treemacs which-key yasnippet flycheck)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -66,6 +66,9 @@
 ;; to install the font call
 ;; M-x all-the-icons-install-fonts
 
+;;Rust package and configuration
+(use-package rust-mode
+  :ensure t)
 
 ;; magit
 (use-package magit
@@ -101,6 +104,9 @@
 (add-hook 'c++-mode-hook 'lsp)
 ;; idk 
 (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
+;;rust hooks
+(add-hook 'rust-mode-hook #'lsp)
+
 
 ;; lsp-treemacs
 (use-package lsp-treemacs
