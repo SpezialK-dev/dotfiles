@@ -7,9 +7,20 @@ if [ `id -u` -eq  0 ]
   then echo "DONT RUN AS ROOT"
   exit
 fi
+# variables that might be of use in this script
 
+path_to_dotfiles=$(pwd)
 
 
 # emacs config creating symlink
 test -f /bin/emacs && { echo "emacs installation found"; ln  ./.emacs $HOME/.emacs; }
 
+# bashrc addition script
+# only works when in homedir 
+if grep -q common_bashrc.sh $HOME/.bashrc ; then
+    echo "already added to bashrc"
+else
+    echo "adding to bashrc "
+    echo "source ${path_to_dotfiles}/common_bashrc.sh" >> $HOME/.bashrc
+fi
+   
