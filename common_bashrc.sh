@@ -4,7 +4,7 @@
 # this gets additionally loaded and does replace your normal bashrc 
 
 #calling emacs in terminal also opens it in a terminal window 
-alias emacs='emacs -mw'
+alias emacs='emacs -nw'
 
 #default valgrind flags
 alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose"
