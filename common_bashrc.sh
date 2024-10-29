@@ -3,6 +3,11 @@
 # A none intrusiv bashrc extension 
 # this gets additionally loaded and does replace your normal bashrc 
 
+# Sourcing git files
+# so that we have git auto compleation on all systems regardless of configuration
+source /usr/share/git/completion/git-completion.bash
+
+
 #calling emacs in terminal also opens it in a terminal window 
 alias emacs='emacs -nw'
 
