@@ -14,3 +14,8 @@ Emacs default config does that it is patched in my config. VIM does not destroy 
 ### bashrc 
 
 this is a none intrusiv bashrc and rather enhances your bashrc with my config instead of replacing it 
+
+
+### Emacs
+
+for pdf-tools you need to manually install the package, idk why it just didnt work the lsat time I tried. 
