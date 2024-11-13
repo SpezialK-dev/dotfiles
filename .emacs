@@ -48,14 +48,31 @@
 ;; keybinds for moving between windows 
 (windmove-default-keybindings)
 
+
+;;-----------------------------------------------------
+;; Theming 
+;;-----------------------------------------------------
+
+;; A website for themes 
+;; https://emacsthemes.com/
+;; if we want to switch between themes we either remove the line down there or we just replace the :config load theme directiv
+
+
+;; dracular-theme
+(use-package dracula-theme
+  :ensure t)
+
+;; time-macos
+(use-package timu-macos-theme
+  :ensure t
+  :config
+  (load-theme 'timu-macos t))
+
+
 ;;-----------------------------------------------------
 ;; custom pkgs  and configuration
 ;;-----------------------------------------------------
 
-;; dracular-theme
-
-(use-package dracula-theme
-  :ensure t)
 
 
 ;;all the icons
@@ -104,6 +121,9 @@
 (add-hook 'c++-mode-hook 'lsp)
 ;; idk 
 (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
+;;company hook 
+(add-hook 'after-init-hook 'global-company-mode)
+
 ;;rust hooks
 (add-hook 'rust-mode-hook #'lsp)
 
