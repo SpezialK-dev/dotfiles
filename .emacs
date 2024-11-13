@@ -285,3 +285,13 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+
+;;for latex things 
+;; https://www.gnu.org/software/auctex/manual/auctex/Quick-Start.html#Quick-Start
+(use-package auctex
+  :ensure t)
+
+;; some configuration for this
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil) ;; to ask for a masterfile for each Tex file
