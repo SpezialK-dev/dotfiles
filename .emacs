@@ -295,3 +295,9 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil) ;; to ask for a masterfile for each Tex file
+
+
+;; things for R 
+(use-package ess
+	:ensure t)
+(setq ess-use-company 'script-only)
