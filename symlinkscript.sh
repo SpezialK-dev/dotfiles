@@ -23,4 +23,8 @@ else
     echo "adding to bashrc "
     echo "source ${path_to_dotfiles}/common_bashrc.sh" >> $HOME/.bashrc
 fi
+
+
+# adding vim rc 
+test -f /bin/vim && { echo "Vim installation found"; ln ./.vimrc $HOME/.vimrc; }
    
