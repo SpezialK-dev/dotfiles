@@ -46,3 +46,6 @@ alias kssh="kitten ssh"
 
 # create a gitignore file that already includes the emacs files
 alias cgitignore="echo *.*~ > .gitignore"
+
+#to simply opening files with the correct thing 
+alias open="xdg-open" 
