@@ -27,4 +27,19 @@ fi
 
 # adding vim rc 
 test -f /bin/vim && { echo "Vim installation found"; ln ./.vimrc $HOME/.vimrc; }
-   
+# installint the colorschem to then use in the config, this saves me from using a plugin manager
+# https://github.com/joshdick/onedark.vim
+
+#TODO add test for direcotries since these might not existy 
+
+
+#this script will just move the files since that is quite easy to di 
+# I might have to add another test for the autoload setting but if one of the files exist both should exist
+if test -f $HOME/.vim/colors/onedark.vim ; then 
+	echo "Vim Theme already downloaded"
+else 
+	wget https://raw.githubusercontent.com/joshdick/onedark.vim/refs/heads/main/colors/onedark.vim
+	mv ./onedark.vim $HOME/.vim/colors/onedark.vim
+	wget https://raw.githubusercontent.com/joshdick/onedark.vim/refs/heads/main/autoload/onedark.vim
+	mv  ./onedark.vim $HOME/.vim/autoload/onedark.vim
+fi
