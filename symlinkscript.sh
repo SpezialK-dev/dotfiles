@@ -39,7 +39,10 @@ if test -f $HOME/.vim/colors/onedark.vim ; then
 	echo "Vim Theme already downloaded"
 else 
 	wget https://raw.githubusercontent.com/joshdick/onedark.vim/refs/heads/main/colors/onedark.vim
+	# we will just create these if they dont realdy exist
+	mkdir $HOME/.vim/colors 
 	mv ./onedark.vim $HOME/.vim/colors/onedark.vim
 	wget https://raw.githubusercontent.com/joshdick/onedark.vim/refs/heads/main/autoload/onedark.vim
+	mkdir $HOME/.vim/autoload
 	mv  ./onedark.vim $HOME/.vim/autoload/onedark.vim
 fi
