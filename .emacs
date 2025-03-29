@@ -147,8 +147,8 @@
 
 
 ;; pdf-tools https://github.com/vedang/pdf-tools
-(use-package pdf-tools
-  :ensure t)
+;(use-package pdf-tools
+;;  :ensure t)
 ;; does not install automatically ? might need to be run manually
 
 ;; -------------------------------------------------------
