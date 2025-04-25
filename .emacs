@@ -3,11 +3,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(dracula))
+ '(custom-enabled-themes nil)
  '(custom-safe-themes
-   '("603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961" default))
+   '("c5d8cb70c0fca7ab40b13fd5068c508d51a37feee8565eb3f2f4c3774b17e85b"
+     "603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
+     default))
  '(package-selected-packages
-   '(rust-mode treemacs-nerd-icons all-the-icons treemacs-magit magit dracula-theme dracular-theme multiple-cursors treemacs which-key yasnippet flycheck)))
+   '(rust-mode treemacs-nerd-icons all-the-icons treemacs-magit magit
+	       dracula-theme dracular-theme multiple-cursors treemacs
+	       which-key yasnippet flycheck)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -64,11 +68,10 @@
 
 ;; time-macos
 (use-package timu-macos-theme
-  :ensure t
-  :config
-  (load-theme 'timu-macos t))
+  :ensure t)
 
-
+;; loading the actual theme
+(load-theme 'tango-dark t)
 ;;-----------------------------------------------------
 ;; custom pkgs  and configuration
 ;;-----------------------------------------------------
@@ -150,8 +153,7 @@
 ;(use-package pdf-tools
 ;;  :ensure t)
 ;; does not install automatically ? might need to be run manually
-
-;; -------------------------------------------------------
+; -------------------------------------------------------
 
 ;; treemacs standart configuration
 (use-package treemacs
