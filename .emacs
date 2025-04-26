@@ -148,6 +148,10 @@
 (helm-mode)
 (require 'helm-xref)
 
+;; PlatformIO-mode for embedded things
+(use-package platformio-mode
+	:ensure t)
+
 
 ;; pdf-tools https://github.com/vedang/pdf-tools
 ;(use-package pdf-tools
