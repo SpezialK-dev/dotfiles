@@ -4,7 +4,7 @@
 :filetype on
 
 "color stuff
-:colorschem onedark
+":colorschem onedark
 :hi Normal guibg=NONE ctermbg=NONE
 
 
