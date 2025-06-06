@@ -86,9 +86,40 @@ echo -e "compile:\n	 g++ -o $1 -Wall -g ./src/main.cpp" > $cpppath/$1/makefile
 echo "created makefile"
 
 # creating a hello world file 
-echo -e '#include <iostream>\n\n int main(int argc,char* argv[])\n{std::cout<<"Hello World" << std::endl; \n}' > $cpppath/$1/src/main.cpp
+echo -e '#include <iostream>\n\nint main(int argc,char* argv[]){\n std::cout<<"Hello World" << std::endl; \n}' > $cpppath/$1/src/main.cpp
 
 echo "created main file "
+
+}
+
+#creates a c projekt similar to the cpp one simply with the projekt 
+function ccreate(){
+# checking if a name for the project is set 
+if [ -z $1 ];then  
+	echo "no name was supplyed aborting"
+	return -1
+fi
+
+
+cpath="$(pwd)"
+
+echo "creating new project under $cpath / $1"
+# creating all the paths 
+mkdir $cpath/$1
+echo "created dir"
+mkdir $cpath/$1/src
+echo "created src dir "
+
+#creating all the files 
+#makefile
+echo -e "compile:\n	 gcc -o $1 -Wall -g ./src/main.c" > $cpath/$1/makefile
+echo "created makefile"
+
+# creating a hello world file 
+echo -e '#include <stdio.h>\n\nint main(){\n printf("Hello World");}' > $cpath/$1/src/main.c
+
+echo "created main file "
+
 
 }
 
